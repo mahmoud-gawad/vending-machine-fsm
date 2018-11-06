@@ -23,22 +23,22 @@ The chosen FSM is a Moore FSM, with 5 states that transition as shown. Depending
 
 |State|state[2]|state[1]|state[0]|ne_in|half_in|nstate[2]|nstate[1]|nstate[0]|
 |-----|--------|--------|--------|-----|-------|---------|---------|---------|
-|IDLE|0|0|0|0|1|0|1|0|
-|IDLE|0|0|0|1|0|0|0|1|
-|ONELE|0|0|1|0|1|0|1|1|
-|ONELE|0|0|1|1|0|1|0|0|
-|HALFLE|0|1|0|0|1|0|0|1|
-|HALFLE|0|1|0|1|0|0|1|1|
-|CANOUT|0|1|1|X|X|0|0|0|
-|CHNGOUT|1|0|0|X|X|0|0|0|
+|**IDLE**|0|0|0|0|1|0|1|0|
+|**IDLE**|0|0|0|1|0|0|0|1|
+|**ONELE**|0|0|1|0|1|0|1|1|
+|**ONELE**|0|0|1|1|0|1|0|0|
+|**HALFLE**|0|1|0|0|1|0|0|1|
+|**HALFLE**|0|1|0|1|0|0|1|1|
+|**CANOUT**|0|1|1|X|X|0|0|0|
+|**CHNGOUT**|1|0|0|X|X|0|0|0|
 
 |State|state[2]|state[1]|state[0]|can_out|change_out|
 |-----|--------|--------|--------|-------|----------|
-|IDLE|0|0|0|0|0|
-|ONELE|0|0|1|0|0|
-|HALFLE|0|1|0|0|0|
-|CANOUT|0|1|1|1|0|
-|CHNGOUT|1|0|0|1|1|
+|**IDLE**|0|0|0|0|0|
+|**ONELE**|0|0|1|0|0|
+|**HALFLE**|0|1|0|0|0|
+|**CANOUT**|0|1|1|1|0|
+|**CHNGOUT**|1|0|0|1|1|
 
 ![FSM Diagram](https://i.imgur.com/Pn0OESe.png "FSM Diagram")
 
