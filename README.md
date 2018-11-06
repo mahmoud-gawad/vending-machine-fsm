@@ -42,19 +42,19 @@ The chosen FSM is a Moore FSM, with 5 states that transition as shown. Depending
 
 ![FSM Diagram](https://i.imgur.com/Pn0OESe.png "FSM Diagram")
 
-## 2.2 High Level RTL Design
+### 2.2 High Level RTL Design
 The RTL description of the FSM is coded in Verilog. The code describes the above FSM and allows for functional testing and simulation.
 The simulation is carried out using ModelSim. The result of the simulation is shown in the next figure.
 
 ![FSM Testing Results](https://i.imgur.com/tUaPP7I.png "FSM Testing Results")
 
-## 2.3 Design Synthesis
+### 2.3 Design Synthesis
 The realization of the design is made using Synopsys' *Design Compiler* tool. The schematic of the synthesis output is shown in the next figure.
 The timing report tells us that the Slack is met and the design is ready to move to the next stage. The area and power reports are also supplied, and the total area is approximately 262 nm2 and the chip uses 0.8088 μW of power.
 
 ![Chip Synthesis](https://i.imgur.com/IdNT8KD.png "Chip Synthesis")
 
-## 2.4 Placement & Routing
+### 2.4 Placement & Routing
 The PnR is carried out using *IC Compiler* tool. The placement starts with importing the cells.
 
 ![Design Cells](https://i.imgur.com/eKtbU5Q.png "Design Cells")
@@ -71,14 +71,14 @@ Then comes the routing step, where we route every cell and port together trying 
 
 ![Cells Routing](https://i.imgur.com/tCGvvBZ.png "Cells Routing")
 
-## 2.5 Padding
+### 2.5 Padding
 Before sending the IC to manufacturing, we need to add pads to it. Pads are used to protect the IC from electrostatic discharge (ESD), provide level shifting from external to core and vice versa, limit current caused by voltage spikes and drain away high voltages by using diodes. The next figure provides a look at how the chip looks like after adding the pads. A zoomed-in version is provided below to have an idea of the actual area of the chip.
 
 ![Final Chip With Pads](https://i.imgur.com/Gj77knn.png "Final Chip With Pads")
 
 ![Zoomed-in Chip View](https://i.imgur.com/4m7CyLc.png "Zoomed-in Chip View")
 
-# 3 Conclusion
+## 3 Conclusion
 A final chip to control the vending machine is designed for the required specifications and a final GDSII is completed to be ready for manufacturing.
 The chip was tested using the specified frequency and it was proved functionally correct within it with positive Slack.
 This is a simple design, but it uses all the steps and tools that can be used to design larger and more complicated chips.
